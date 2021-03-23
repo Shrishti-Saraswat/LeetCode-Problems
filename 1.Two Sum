@@ -1,0 +1,19 @@
+Problem link: https://leetcode.com/problems/two-sum/
+
+Solution
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        li=[]
+        for i in range(0,len(nums)):
+            a=target-nums[i]
+            if a in nums:
+                j=nums.index(a)
+                if i!=j:
+                    li.append(i)
+                    li.append(j)
+                    break
+        return li
+            
+        
+        
